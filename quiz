@@ -1,0 +1,42 @@
+score = 0
+questions = [
+    {
+        "question": "What is the capital of India?",
+        "options": ["A. Mumbai", "B. Delhi", "C. Kolkata", "D. Chennai"],
+        "answer": "B"
+    },
+    {
+        "question": "Who developed Python language?",
+        "options": ["A. Dennis Ritchie", "B. Bjarne Stroustrup", "C. Guido van Rossum", "D. James Gosling"],
+        "answer": "C"
+    },
+    {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["A. func", "B. def", "C. define", "D. function"],
+        "answer": "B"
+    },
+    {
+        "question": "Which data type is immutable in Python?",
+        "options": ["A. List", "B. Dictionary", "C. Set", "D. Tuple"],
+        "answer": "D"
+    }
+]
+
+print("Welcome to the Python Quiz!")
+print("----------------------------------")
+for q in questions:
+    print("\n" + q["question"])
+    for option in q["options"]:
+        print(option)
+    user_ans = input("Enter your answer (A/B/C/D): ").strip().upper()
+
+    if user_ans == q["answer"]:
+        print("Correct!")
+        score = score + 1
+    else:
+        print(f"Wrong! The correct answer is {q['answer']}.")
+
+# Final score
+print("\n----------------------------------")
+print(f" You got {score} out of {len(questions)} correct!")
+print("----------------------------------")
